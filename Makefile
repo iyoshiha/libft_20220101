@@ -16,6 +16,10 @@ SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			bi_ring_lstadd_back.c bi_ring_lstadd_front.c bi_ring_lstclear.c \
 			bi_ring_lstdel_one.c bi_ring_lstiter.c bi_ring_lstnew.c bi_ring_lstsize.c \
 			get_next_line.c get_next_line_utils.c \
+			handle_c.c handle_i.c handle_low_x.c handle_pct.c handle_u.c \
+			handle_d.c handle_large_x.c handle_p.c handle_s.c \
+			print_address.c print_decimal_base.c print_hex_base.c \
+			convert_and_count.c ft_printf.c output.c
 
 OBJECTS = $(SRCFILE:.c=.o)
 
