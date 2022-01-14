@@ -1,12 +1,12 @@
-#include "libft_bonus.h"
+#include "libft.h"
 
-t_list	*bi_ring_lst_init_nil(long val)
+t_bi_list	*bi_ring_lst_init_nil(long val)
 {
-	t_list *nil;
+	t_bi_list *nil;
 
-	nil = malloc(sizeof(t_list));
+	nil = malloc(sizeof(t_bi_list));
 	if (!nil)
-		err;
+		return (NULL);
 	nil->next = nil;
 	nil->prev = nil;
 	nil->value = val;
@@ -14,11 +14,11 @@ t_list	*bi_ring_lst_init_nil(long val)
 	return (nil);
 }
 
-t_list	*bi_ring_lstnew(long value)
+t_bi_list	*bi_ring_lstnew(long value)
 {
-	t_list *new_element;
+	t_bi_list *new_element;
 
-	new_element = malloc(sizeof(t_list));
+	new_element = malloc(sizeof(t_bi_list));
 	if (!new_element)
 		return (NULL);
 	new_element->value = value;

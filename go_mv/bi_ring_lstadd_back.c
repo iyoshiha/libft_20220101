@@ -1,8 +1,8 @@
-#include "libft_bonus.h"
+#include "libft.h"
 
-void bi_ring_lstadd_back(t_list *nil, t_list *new)
+void bi_ring_lstadd_back(t_bi_list *nil, t_bi_list *new)
 {
-	t_list	*btm;
+	t_bi_list	*btm;
 
 	btm = nil->prev;
 	new->next = nil;

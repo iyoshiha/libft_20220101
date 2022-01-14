@@ -1,6 +1,6 @@
-#include "libft_bonus.h"
+#include "libft.h"
 
-size_t bi_ring_lstsize(t_list *lst)
+size_t bi_ring_lstsize(t_bi_list *lst)
 {
 	size_t len;
 

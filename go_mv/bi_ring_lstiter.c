@@ -1,6 +1,6 @@
-#include "libft_bonus.h"
+#include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void bi_ring_lstiter(t_bi_list *lst, void (*f)(void *))
 {
 	if (f || lst)
 	{

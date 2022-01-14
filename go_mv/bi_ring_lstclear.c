@@ -1,9 +1,9 @@
-#include "libft_bonus.h"
+#include "libft.h"
 
-void bi_ring_lstclear(t_list **lst)
+void bi_ring_lstclear(t_bi_list **lst)
 {
-	t_list *del_element;
-	t_list *free_element;
+	t_bi_list *del_element;
+	t_bi_list *free_element;
 
 	if (lst)
 	{

@@ -6,23 +6,31 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:46:34 by iyoshiha          #+#    #+#             */
-/*   Updated: 2022/01/09 03:14:47 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2022/01/15 06:40:20 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+#include <libc.h>
+#define NIL	0x7FFFFFFFFFFFFFFF
+#define IS_NIL 1
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
+typedef char t_bool;
 
 typedef struct      s_list
 {
     void            *content;
     struct s_list   *next;
 }                   t_list;
+
+typedef struct      s_bi_list
+{
+    struct s_bi_list   *next;
+    struct s_bi_list   *prev;
+    long			value;
+	t_bool			is_nil;
+}                   t_bi_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -68,4 +76,19 @@ size_t ft_lstsize(t_list *lst);
 void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstadd_front(t_list **lst, t_list *new);
 
+void bi_ring_lstadd_back(t_bi_list *nil, t_bi_list *new);
+void bi_ring_lstadd_front(t_bi_list *nil, t_bi_list *new);
+void bi_ring_lstclear(t_bi_list **lst);
+void bi_ring_lstdel_one(t_bi_list *lst);
+void bi_ring_lstiter(t_bi_list *lst, void (*f)(void *));
+t_bi_list	*bi_ring_lstnew(long value);
+size_t bi_ring_lstsize(t_bi_list *lst);
+t_bi_list	*bi_ring_lst_init_nil(long val);
+
 #endif
+
+/*
+	You need to change NIL value depending on the situation.
+	current value is below:
+	#define NIL	0x7FFFFFFFFFFFFFFF
+*/
