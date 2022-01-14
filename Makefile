@@ -1,7 +1,8 @@
-CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-INCLUDE = -I /User/iyoshiha/include/
-CC = gcc $(INCLUDE)
+// INCLUDE = -I /User/iyoshiha/include/
+INCLUDE = -I include/
+CFLAGS = -Wall -Wextra -Werror $(INCLUDE)
+CC = gcc
 
 SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
@@ -12,14 +13,9 @@ SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c \
-			bi_ring_lstadd_back.c \
-			bi_ring_lstadd_front.c \
-			bi_ring_lstclear.c \
-			bi_ring_lstdel_one.c \
-			bi_ring_lstiter.c \
-			bi_ring_lstnew.c \
-			bi_ring_lstsize.c \
-
+			bi_ring_lstadd_back.c bi_ring_lstadd_front.c bi_ring_lstclear.c \
+			bi_ring_lstdel_one.c bi_ring_lstiter.c bi_ring_lstnew.c bi_ring_lstsize.c \
+			get_next_line.c get_next_line_utils.c \
 
 OBJECTS = $(SRCFILE:.c=.o)
 
