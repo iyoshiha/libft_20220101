@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:46:34 by iyoshiha          #+#    #+#             */
-/*   Updated: 2022/01/15 07:31:33 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2022/01/15 08:40:40 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ void bi_ring_lstiter(t_bi_list *lst, void (*f)(void *));
 t_bi_list	*bi_ring_lstnew(long value);
 size_t bi_ring_lstsize(t_bi_list *lst);
 t_bi_list	*bi_ring_lst_init_nil(long val);
+
+int		ft_printf(const char	*format, ...);
 
 #endif
 
