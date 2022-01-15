@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:46:34 by iyoshiha          #+#    #+#             */
-/*   Updated: 2022/01/15 08:40:40 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2022/01/15 09:13:20 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # define NIL	0x7FFFFFFFFFFFFFFF
 # define IS_NIL 1
 
-typedef char t_bool;
+typedef char	t_bool;
+typedef int		swap_num;
 
 typedef struct      s_list
 {
@@ -32,6 +33,15 @@ typedef struct      s_bi_list
     long			value;
 	t_bool			is_nil;
 }                   t_bi_list;
+
+typedef struct		s_sort_index
+{
+	int		i;
+	int		j;
+	int		k;
+	swap_num	num_swaped;
+	t_bool	flag;
+}					t_sort_index;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -87,6 +97,7 @@ size_t bi_ring_lstsize(t_bi_list *lst);
 t_bi_list	*bi_ring_lst_init_nil(long val);
 
 int		ft_printf(const char	*format, ...);
+int		bubble_sort(int *num, int n);
 
 #endif
 
