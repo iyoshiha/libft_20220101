@@ -19,7 +19,8 @@ SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			handle_c.c handle_i.c handle_low_x.c handle_pct.c handle_u.c \
 			handle_d.c handle_large_x.c handle_p.c handle_s.c \
 			print_address.c print_decimal_base.c print_hex_base.c \
-			convert_and_count.c ft_printf.c output.c
+			convert_and_count.c ft_printf.c output.c \
+			bubble_sort.c \
 
 OBJECTS = $(SRCFILE:.c=.o)
 
@@ -29,7 +30,7 @@ $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
 %.o: %.c
-	gcc $(CFLAGS) -c $< -o $@ -I.
+	gcc -c $< -o $@ $(CFLAGS)
 
 clean:
 	$(RM) $(OBJECTS)

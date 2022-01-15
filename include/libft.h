@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:46:34 by iyoshiha          #+#    #+#             */
-/*   Updated: 2022/01/15 09:15:19 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2022/01/15 10:10:11 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,14 @@
 # define IS_NIL 1
 
 typedef char	t_bool;
-typedef int		swap_num;
+typedef int		t_swap_num;
+
+typedef enum	e_order
+{
+	asc,
+	desc
+}				t_e_order;
+
 
 typedef struct      s_list
 {
@@ -39,7 +46,7 @@ typedef struct		s_sort_index
 	int		i;
 	int		j;
 	int		k;
-	swap_num	num_swaped;
+	t_swap_num	num_swaped;
 	t_bool	flag;
 }					t_sort_index;
 
@@ -97,7 +104,7 @@ size_t bi_ring_lstsize(t_bi_list *lst);
 t_bi_list	*bi_ring_lst_init_nil(long val);
 
 int		ft_printf(const char	*format, ...);
-swap_num	bubble_sort(int *num, int n);
+t_swap_num	bubble_sort(int *num, int len2sort, t_e_order order);
 
 #endif
 
