@@ -1,6 +1,6 @@
 #include "libft.h"
 
-swap_num	bubble_sort(int *num, int n)
+swap_num	bubble_sort(int *num, int len2sort)
 {
 	t_sort_index	sort_i;
 
@@ -9,7 +9,7 @@ swap_num	bubble_sort(int *num, int n)
 	sort_i.num_swaped = 0;
 	while (sort_i.flag)
 	{
-		sort_i.i = n - 1;
+		sort_i.i = len2sort - 1;
 		sort_i.j = sort_i.i - 1;
 		sort_i.flag = 0;
 		while (sort_i.k <= sort_i.j)
