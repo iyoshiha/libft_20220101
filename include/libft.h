@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:46:34 by iyoshiha          #+#    #+#             */
-/*   Updated: 2022/01/15 09:13:20 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2022/01/15 09:15:19 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ size_t bi_ring_lstsize(t_bi_list *lst);
 t_bi_list	*bi_ring_lst_init_nil(long val);
 
 int		ft_printf(const char	*format, ...);
-int		bubble_sort(int *num, int n);
+swap_num	bubble_sort(int *num, int n);
 
 #endif
 
