@@ -6,7 +6,7 @@ void bi_ring_lstadd_back(t_bi_list *nil, t_bi_list *new)
 
 	btm = nil->prev;
 	new->next = nil;
-	new->next->prev = new;
 	new->prev = btm;
+	nil->prev = new;
 	btm->next = new;
 }
