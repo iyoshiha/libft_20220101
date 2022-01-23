@@ -6,7 +6,7 @@
 /*   By: iyoshiha <iyoshiha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 06:46:34 by iyoshiha          #+#    #+#             */
-/*   Updated: 2022/01/15 10:10:11 by iyoshiha         ###   ########.fr       */
+/*   Updated: 2022/01/23 23:36:35 by iyoshiha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,9 @@ void bi_ring_lstadd_front(t_bi_list *nil, t_bi_list *new);
 void bi_ring_lstclear(t_bi_list **lst);
 void bi_ring_lstdel_one(t_bi_list *lst);
 void bi_ring_lstiter(t_bi_list *lst, void (*f)(void *));
-t_bi_list	*bi_ring_lstnew(long value);
+t_bi_list	*bi_ring_lstnew(unsigned int value);
 size_t bi_ring_lstsize(t_bi_list *lst);
-t_bi_list	*bi_ring_lst_init_nil(long val);
+t_bi_list	*bi_ring_lst_init_nil(unsigned int val);
 
 int		ft_printf(const char	*format, ...);
 t_swap_num	bubble_sort(int *num, int len2sort, t_e_order order);
@@ -111,5 +111,5 @@ t_swap_num	bubble_sort(int *num, int len2sort, t_e_order order);
 /*
 	You need to change NIL value depending on the situation.
 	current value is below:
-	#define NIL	0x7FFFFFFFFFFFFFFF
+	#define NIL	0xffffffff
 */

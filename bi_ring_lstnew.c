@@ -1,6 +1,6 @@
 #include "libft.h"
 
-t_bi_list	*bi_ring_lst_init_nil(long val)
+t_bi_list	*bi_ring_lst_init_nil(unsigned int val)
 {
 	t_bi_list *nil;
 
@@ -14,7 +14,7 @@ t_bi_list	*bi_ring_lst_init_nil(long val)
 	return (nil);
 }
 
-t_bi_list	*bi_ring_lstnew(long value)
+t_bi_list	*bi_ring_lstnew(unsigned int value)
 {
 	t_bi_list *new_element;
 
